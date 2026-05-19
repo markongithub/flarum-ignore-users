@@ -1,6 +1,6 @@
 {
-    "name": "fof/ignore-users",
-    "description": "Allow users to ignore other users.",
+    "name": "whoismark/ignore-users",
+    "description": "Allow users to ignore other users, like Mark..",
     "keywords": [
         "flarum"
     ],

@@ -21,6 +21,7 @@ use Flarum\User\Search\UserSearcher;
 use Flarum\User\User;
 use FoF\IgnoreUsers\Event\Ignoring;
 use FoF\IgnoreUsers\Event\Unignoring;
+use FoF\IgnoreUsers\Notification\YourExtensionServiceProvider;
 use FoF\IgnoreUsers\User\Search\Filter\IgnoredFilter;
 use Illuminate\Contracts\Events\Dispatcher;
 
@@ -105,4 +106,7 @@ return [
 
     (new Extend\ApiResource(Resource\ForumResource::class))
         ->endpoint('show', fn ($endpoint) => $endpoint->addDefaultInclude(['actor.ignoredUsers'])),
+
+    (new Extend\ServiceProvider())
+        ->register(YourExtensionServiceProvider::class),
 ];
