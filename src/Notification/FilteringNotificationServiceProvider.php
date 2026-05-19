@@ -5,7 +5,7 @@ namespace FoF\IgnoreUsers\Notification;
 use Flarum\Foundation\AbstractServiceProvider;
 use Flarum\Notification\NotificationSyncer;
 
-class YourExtensionServiceProvider extends AbstractServiceProvider
+class FilteringNotificationServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {
