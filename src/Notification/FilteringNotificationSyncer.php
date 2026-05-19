@@ -17,7 +17,7 @@ class FilteringNotificationSyncer extends NotificationSyncer
 
     private function isSuppressed(BlueprintInterface $blueprint, $user): bool
     {
-        error_log("called isSuppressed for subject " . $blueprint->getSubject());
-        return false;
+        // suppress the notification if the from user is in the user's ignored users list
+        return in_array($blueprint->getFromUser()->id, $user->ignoredUsers()->pluck('id')->all());
     }
 }
